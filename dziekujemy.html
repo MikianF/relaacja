@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dziękuję za wiadomość — Relaacja</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styl.css">
+<link rel="icon" type="image/jpeg" href="zdjecia/logo.jpg">
+</head>
+<body>
+<div class="pasek-budowa">Wersja robocza &mdash; <span>ceny i cz&#281;&#347;&#263; informacji jeszcze uzupe&#322;niamy</span></div>
+
+<header class="gora">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <img src="zdjecia/logo.jpg" alt="Logo gabinetu Relaacja">
+      <span>Rel<span class="aac">AAC</span>ja<span class="podtytul">Wsparcie i rozwój &middot; Konin</span></span>
+    </a>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="o-mnie.html">O mnie</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:96px 0;">
+  <div class="wrap waski srodek">
+    <p style="font-size:3.4rem;line-height:1;margin-bottom:18px;">💌</p>
+    <h1>Wiadomość dotarła</h1>
+    <p class="lead" style="margin-top:16px;">
+      Dziękuję za zaufanie. Odezwę się w ciągu 1–2 dni roboczych —
+      telefonicznie albo mailem, zależnie od tego, co podałaś/podałeś.
+    </p>
+    <p style="margin-top:24px;">
+      Jeśli sprawa jest pilna, zadzwoń:
+      <a href="tel:+48667849081"><strong>667 849 081</strong></a>
+    </p>
+    <p style="margin-top:34px;">
+      <a class="btn btn-obrys" href="index.html">Wróć na stronę główną</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Relaacja</h4>
+      <p>Anna Makowska<br>
+         Gabinet Terapii Pedagogicznej<br>
+         Alternatywne i wspomagające metody komunikacji<br>
+         ul. Kwiatowa 21, 62-510 Konin</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+48667849081">667 849 081</a></li>
+        <li><a href="mailto:relaacja@gmail.com">relaacja@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Strona</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="o-mnie.html">O mnie</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="stopka-dol">&copy; 2026 Relaacja. Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script>
+// Formularz ruszy dopiero razem z polityka prywatnosci - do tego czasu
+// kierujemy rodzicow na telefon i maila, zeby nikt nie wysylal danych w prozne.
+document.querySelectorAll('form').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Formularz zostanie uruchomiony wkr\u00f3tce.\n\nNa razie prosz\u0119 o kontakt telefoniczny: 667 849 081\nlub mailowy: relaacja@gmail.com');
+  });
+});
+</script>
+</body>
+</html>

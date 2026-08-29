@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt i umówienie wizyty — Relaacja | Konin, ul. Kwiatowa 21</title>
+<meta name="description" content="Umów konsultację w gabinecie Relaacja w Koninie. Telefon 667 849 081, relaacja@gmail.com, ul. Kwiatowa 21. Formularz zgłoszeniowy — odpowiedź w 1–2 dni robocze.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styl.css">
+<link rel="icon" type="image/jpeg" href="zdjecia/logo.jpg">
+</head>
+<body>
+<div class="pasek-budowa">Wersja robocza &mdash; <span>ceny i cz&#281;&#347;&#263; informacji jeszcze uzupe&#322;niamy</span></div>
+
+<header class="gora">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <img src="zdjecia/logo.jpg" alt="Logo gabinetu Relaacja">
+      <span>Rel<span class="aac">AAC</span>ja<span class="podtytul">Wsparcie i rozwój &middot; Konin</span></span>
+    </a>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="o-mnie.html">O mnie</a>
+      <a href="kontakt.html" class="tu">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="waski" style="margin:0 auto 44px;text-align:center;">
+      <p class="nadtytul">Kontakt</p>
+      <h1>Umówmy pierwsze spotkanie</h1>
+      <p class="lead" style="margin-top:14px;">
+        Wypełnij formularz albo po prostu zadzwoń. Odpowiadam zwykle
+        w ciągu 1–2 dni roboczych.
+      </p>
+    </div>
+
+    <div class="kontakt-siatka">
+
+      <!-- ---------- dane kontaktowe ---------- -->
+      <div>
+        <h2>Dane gabinetu</h2>
+        <ul class="dane">
+          <li>
+            <span class="ikona">📞</span>
+            <div>
+              <span class="etykieta">Telefon</span>
+              <a href="tel:+48667849081">667 849 081</a>
+            </div>
+          </li>
+          <li>
+            <span class="ikona">✉️</span>
+            <div>
+              <span class="etykieta">E-mail</span>
+              <a href="mailto:relaacja@gmail.com">relaacja@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="ikona">📍</span>
+            <div>
+              <span class="etykieta">Adres</span>
+              <span style="font-weight:600;">ul. Kwiatowa 21<br>62-510 Konin</span>
+              <span style="display:block;color:var(--tekst-jasny);font-size:.92rem;">osiedle Glinka</span>
+            </div>
+          </li>
+          <li>
+            <span class="ikona">🕐</span>
+            <div>
+              <span class="etykieta">Godziny przyjęć</span>
+              <span style="font-weight:600;">[UZUPEŁNIĆ: np. pon.–pt. 14:00–19:00<br>
+              sob. 9:00–13:00]</span>
+            </div>
+          </li>
+          <li>
+            <span class="ikona">💬</span>
+            <div>
+              <span class="etykieta">Messenger i Facebook</span>
+              <a href="https://www.facebook.com/profile.php?id=100088974345135">Relaacja</a>
+            </div>
+          </li>
+        </ul>
+
+        <iframe class="mapa"
+                src="https://www.google.com/maps?q=ul.+Kwiatowa+21,+62-510+Konin&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa dojazdu do gabinetu Relaacja, ul. Kwiatowa 21 w Koninie"></iframe>
+      </div>
+
+      <!-- ---------- formularz ---------- -->
+      <div>
+        <h2>Formularz zgłoszeniowy</h2>
+        <form class="formularz" name="kontakt" method="POST"
+              data-netlify="true" netlify-honeypot="bot-field"
+              action="dziekujemy.html">
+
+          <input type="hidden" name="form-name" value="kontakt">
+          <p class="ukryte">
+            <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
+          </p>
+
+          <div class="pole">
+            <label for="imie">Imię i nazwisko <span aria-hidden="true">*</span></label>
+            <input type="text" id="imie" name="imie" required autocomplete="name">
+          </div>
+
+          <div class="pole">
+            <label for="telefon">Telefon <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telefon" name="telefon" required autocomplete="tel">
+          </div>
+
+          <div class="pole">
+            <label for="email">E-mail
+              <span class="podpowiedz">(opcjonalnie)</span></label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+
+          <div class="pole">
+            <label for="wiek">Wiek dziecka</label>
+            <input type="text" id="wiek" name="wiek" placeholder="np. 6 lat">
+          </div>
+
+          <div class="pole">
+            <label for="temat">Czego dotyczy zgłoszenie?</label>
+            <select id="temat" name="temat">
+              <option>Diagnoza umiejętności komunikacyjnych</option>
+              <option>Komunikacja alternatywna (AAC)</option>
+              <option>Książka lub tablica komunikacyjna</option>
+              <option>Mówik, eye-tracking, synteza mowy</option>
+              <option>Terapia pedagogiczna</option>
+              <option>TUS — trening umiejętności społecznych</option>
+              <option>Wczesne wspomaganie rozwoju</option>
+              <option>Konsultacja dla rodzica lub nauczyciela</option>
+              <option>Inne / nie wiem</option>
+            </select>
+          </div>
+
+          <div class="pole">
+            <label for="wiadomosc">Co Cię niepokoi?
+              <span class="podpowiedz">Kilka zdań w zupełności wystarczy.</span></label>
+            <textarea id="wiadomosc" name="wiadomosc" required></textarea>
+          </div>
+
+          <div class="pole zgoda">
+            <input type="checkbox" id="zgoda" name="zgoda" required>
+            <label for="zgoda">
+              Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi
+              na zgłoszenie. Szczegóły w
+              <a href="polityka-prywatnosci.html">polityce prywatności</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="btn" style="width:100%;">Wyślij zgłoszenie</button>
+        </form>
+
+        <p style="font-size:.9rem;color:var(--tekst-jasny);margin-top:16px;">
+          Nie opisuj w formularzu szczegółów medycznych — o tym spokojnie
+          porozmawiamy przez telefon albo na spotkaniu.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Relaacja</h4>
+      <p>Anna Makowska<br>
+         Gabinet Terapii Pedagogicznej<br>
+         Alternatywne i wspomagające metody komunikacji<br>
+         ul. Kwiatowa 21, 62-510 Konin</p>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+48667849081">667 849 081</a></li>
+        <li><a href="mailto:relaacja@gmail.com">relaacja@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100088974345135">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Strona</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="o-mnie.html">O mnie</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="stopka-dol">&copy; 2026 Relaacja &middot; Anna Makowska. Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script>
+// Formularz ruszy dopiero razem z polityka prywatnosci - do tego czasu
+// kierujemy rodzicow na telefon i maila, zeby nikt nie wysylal danych w prozne.
+document.querySelectorAll('form').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Formularz zostanie uruchomiony wkr\u00f3tce.\n\nNa razie prosz\u0119 o kontakt telefoniczny: 667 849 081\nlub mailowy: relaacja@gmail.com');
+  });
+});
+</script>
+</body>
+</html>

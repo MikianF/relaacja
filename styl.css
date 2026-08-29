@@ -1,0 +1,298 @@
+/* ============================================================
+   Relaacja - Gabinet Terapii Pedagogicznej. AAC
+   Wspolny arkusz stylow dla wszystkich podstron.
+   ============================================================ */
+
+/* Paleta wzieta wprost z logo gabinetu: turkusowa ksiazka,
+   magentowy dymek i pomaranczowy gradient u dolu. */
+:root{
+  --tlo:#F8FAFA;
+  --tlo-karta:#FFFFFF;
+  --tlo-akcent:#E9F3F5;   /* jasny turkus - sekcje wyrozniane */
+  --tekst:#1F2A2C;
+  --tekst-jasny:#5A6769;
+  --akcent:#2B7E8C;       /* turkus z logo - kolor glowny */
+  --akcent-ciemny:#1E616E;
+  --cieply:#C0287E;       /* magenta z logo - akcenty, podkreslenia */
+  --pomarancz:#EE7B22;    /* pomarancz z logo - drobne detale */
+  --ramka:#DBE5E7;
+  --cien:0 2px 12px rgba(31,42,44,.07);
+  --cien-mocny:0 8px 28px rgba(31,42,44,.13);
+  --zaokr:14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--tlo);
+  color:var(--tekst);
+  font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  font-size:18px;          /* duzy tekst - czytelnosc jest tu priorytetem */
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+.waski{max-width:760px;}
+
+/* ---------- typografia ---------- */
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2;font-weight:600;}
+h1{font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.01em;}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:18px;}
+h3{font-size:1.25rem;margin-bottom:8px;}
+p{margin-bottom:16px;}
+p:last-child{margin-bottom:0;}
+a{color:var(--akcent-ciemny);}
+strong{font-weight:600;}
+
+.nadtytul{
+  font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cieply);font-weight:700;margin-bottom:10px;
+}
+.lead{font-size:1.15rem;color:var(--tekst-jasny);}
+
+/* ---------- naglowek strony ---------- */
+.gora{
+  background:var(--tlo);
+  border-bottom:1px solid var(--ramka);
+  position:sticky;top:0;z-index:50;
+}
+.gora .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;
+}
+.logo{
+  font-family:'Fraunces',Georgia,serif;font-size:1.45rem;font-weight:600;
+  color:var(--akcent-ciemny);text-decoration:none;line-height:1.1;
+  display:flex;align-items:center;gap:11px;
+}
+.logo img{
+  width:46px;height:46px;border-radius:50%;display:block;flex-shrink:0;
+  /* logo ma biale tlo - okrag wtapia je w tlo strony */
+}
+/* w logo z ulotki czlon "AAC" jest magentowy - to samo robimy w nazwie */
+.logo .aac{color:var(--cieply);}
+.logo .podtytul{display:block;font-family:inherit;font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tekst-jasny);font-weight:400;margin-top:2px;}
+
+nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+nav a{
+  text-decoration:none;color:var(--tekst);font-size:.98rem;
+  padding:8px 14px;border-radius:999px;transition:background .15s,color .15s;
+}
+nav a:hover{background:var(--tlo-akcent);}
+nav a.tu{background:var(--akcent);color:#fff;}
+
+/* ---------- przyciski ---------- */
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:1rem;
+  padding:14px 28px;border-radius:999px;border:2px solid var(--akcent);
+  background:var(--akcent);color:#fff;cursor:pointer;
+  transition:background .15s,border-color .15s,transform .1s;
+}
+.btn:hover{background:var(--akcent-ciemny);border-color:var(--akcent-ciemny);}
+.btn:active{transform:translateY(1px);}
+.btn-obrys{background:transparent;color:var(--akcent-ciemny);}
+.btn-obrys:hover{background:var(--tlo-akcent);color:var(--akcent-ciemny);border-color:var(--akcent-ciemny);}
+
+/* ---------- sekcje ---------- */
+section{padding:64px 0;}
+section.akcent{background:var(--tlo-akcent);}
+.srodek{text-align:center;}
+.srodek .nadtytul{margin-left:auto;margin-right:auto;}
+
+/* ---------- hero ---------- */
+.hero{padding:76px 0 68px;}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center;}
+.hero p.lead{margin-top:18px;font-size:1.22rem;}
+.hero .przyciski{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;}
+.hero-foto{
+  aspect-ratio:1/1;border-radius:var(--zaokr);overflow:hidden;
+  background:var(--tlo-akcent);box-shadow:var(--cien-mocny);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--tekst-jasny);font-size:.95rem;text-align:center;padding:24px;
+}
+.hero-foto img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ---------- karty ---------- */
+.karty{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;}
+.karta{
+  background:var(--tlo-karta);border:1px solid var(--ramka);
+  border-radius:var(--zaokr);padding:28px 26px;box-shadow:var(--cien);
+}
+.karta .ikona{font-size:1.9rem;line-height:1;margin-bottom:14px;display:block;}
+.karta p{color:var(--tekst-jasny);font-size:1rem;}
+
+/* karta ze zdjeciem na gorze */
+.karta.z-foto{padding:0;overflow:hidden;display:flex;flex-direction:column;}
+.karta.z-foto img{
+  width:100%;aspect-ratio:10/7;object-fit:cover;display:block;
+  background:var(--tlo-akcent);
+}
+.karta.z-foto .tresc{padding:24px 26px 28px;}
+
+/* szeroki pas ze zdjeciem miedzy sekcjami */
+.banner{
+  display:block;width:100%;height:clamp(170px,24vw,280px);
+  object-fit:cover;border-radius:var(--zaokr);box-shadow:var(--cien);
+  background:var(--tlo-akcent);
+}
+
+/* karta uslugi z cena */
+.usluga{
+  background:var(--tlo-karta);border:1px solid var(--ramka);
+  border-radius:var(--zaokr);padding:28px 26px;box-shadow:var(--cien);margin-bottom:18px;
+}
+.usluga .naglowek{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:16px;flex-wrap:wrap;margin-bottom:10px;
+}
+.usluga h3{margin-bottom:0;}
+.cena{
+  font-weight:700;color:var(--akcent-ciemny);white-space:nowrap;font-size:1.05rem;
+  background:var(--tlo-akcent);padding:5px 14px;border-radius:999px;
+}
+.usluga p{color:var(--tekst-jasny);font-size:1rem;}
+.usluga ul{margin:10px 0 0 20px;color:var(--tekst-jasny);font-size:1rem;}
+.usluga li{margin-bottom:5px;}
+
+/* ---------- lista z ptaszkami ---------- */
+.lista-check{list-style:none;display:grid;gap:12px;margin-top:20px;}
+.lista-check li{padding-left:34px;position:relative;color:var(--tekst-jasny);}
+.lista-check li::before{
+  content:"";position:absolute;left:0;top:.45em;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--akcent);
+}
+.lista-check li::after{
+  content:"";position:absolute;left:5px;top:.72em;
+  width:8px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;
+  transform:rotate(-45deg);
+}
+
+/* ---------- cytat / wyrozniony blok ---------- */
+.cytat{
+  border-left:4px solid var(--cieply);padding:6px 0 6px 24px;
+  font-family:'Fraunces',Georgia,serif;font-size:1.3rem;line-height:1.5;
+  color:var(--akcent-ciemny);margin:28px 0;
+}
+
+/* ---------- formularz ---------- */
+.formularz{
+  background:var(--tlo-karta);border:1px solid var(--ramka);
+  border-radius:var(--zaokr);padding:32px;box-shadow:var(--cien);
+}
+.pole{margin-bottom:20px;}
+.pole label{display:block;font-weight:600;margin-bottom:6px;font-size:1rem;}
+.pole .podpowiedz{font-weight:400;color:var(--tekst-jasny);font-size:.9rem;}
+.pole input,.pole textarea,.pole select{
+  width:100%;font-family:inherit;font-size:1rem;color:var(--tekst);
+  padding:12px 14px;border:1px solid var(--ramka);border-radius:10px;
+  background:var(--tlo);transition:border-color .15s,box-shadow .15s;
+}
+.pole input:focus,.pole textarea:focus,.pole select:focus{
+  outline:none;border-color:var(--akcent);box-shadow:0 0 0 3px rgba(63,125,110,.16);
+}
+.pole textarea{min-height:130px;resize:vertical;}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--tekst-jasny);}
+.zgoda input{width:auto;margin-top:5px;flex-shrink:0;}
+.ukryte{position:absolute;left:-9999px;}
+
+/* ---------- dane kontaktowe ---------- */
+.kontakt-siatka{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.dane{list-style:none;display:grid;gap:20px;margin-top:6px;}
+.dane li{display:flex;gap:14px;align-items:flex-start;}
+.dane .ikona{font-size:1.35rem;line-height:1.3;}
+.dane .etykieta{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--tekst-jasny);display:block;}
+.dane a{color:var(--akcent-ciemny);font-weight:600;text-decoration:none;font-size:1.08rem;}
+.dane a:hover{text-decoration:underline;}
+.mapa{width:100%;height:300px;border:0;border-radius:var(--zaokr);
+  box-shadow:var(--cien);margin-top:32px;}
+
+/* ---------- pasek CTA ---------- */
+.cta{background:var(--akcent);color:#fff;text-align:center;}
+.cta h2{color:#fff;}
+.cta p{color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 26px;}
+
+/* pasek CTA ze zdjeciem w tle - turkusowa zaslona trzyma kontrast tekstu */
+.cta.z-tlem{
+  position:relative;
+  background-image:url("zdjecia/banki-mydlane.jpg");
+  background-size:cover;background-position:center;
+}
+.cta.z-tlem::before{
+  content:"";position:absolute;inset:0;
+  background:rgba(30,97,110,.9);
+}
+.cta.z-tlem .wrap{position:relative;z-index:1;}
+.cta .btn{background:#fff;color:var(--akcent-ciemny);border-color:#fff;}
+.cta .btn:hover{background:var(--tlo);border-color:var(--tlo);color:var(--akcent-ciemny);}
+
+/* ---------- stopka ---------- */
+footer{
+  background:#2B302D;color:#C8CDC9;padding:48px 0 32px;font-size:.95rem;
+}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
+footer h4{font-family:'Fraunces',Georgia,serif;color:#fff;font-size:1.05rem;
+  margin-bottom:12px;font-weight:600;}
+footer a{color:#C8CDC9;text-decoration:none;}
+footer a:hover{color:#fff;text-decoration:underline;}
+footer ul{list-style:none;display:grid;gap:8px;}
+.stopka-dol{
+  border-top:1px solid rgba(255,255,255,.14);margin-top:36px;padding-top:20px;
+  font-size:.85rem;color:#8E948F;text-align:center;
+}
+
+/* ---------- telefony i tablety ---------- */
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:34px;}
+  .hero-foto{max-width:340px;margin:0 auto;}
+  .kontakt-siatka{grid-template-columns:1fr;gap:28px;}
+  footer .wrap{grid-template-columns:1fr;gap:26px;}
+}
+@media (max-width:620px){
+  body{font-size:17px;}
+  section{padding:48px 0;}
+  .gora .wrap{flex-direction:column;align-items:flex-start;gap:12px;}
+  nav{width:100%;}
+  nav a{padding:7px 11px;font-size:.92rem;}
+  .formularz{padding:24px 20px;}
+}
+
+/* ---------- dostepnosc ---------- */
+:focus-visible{outline:3px solid var(--cieply);outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
+/* ---------- lista kursow i szkolen ----------
+   Jest ich blisko dwadziescia, wiec w jednej kolumnie robi sie z tego
+   sciana tekstu. Na szerokim ekranie lamiemy ja na dwie. */
+.lista-kursy{
+  list-style:none;margin-top:16px;
+  columns:2;column-gap:34px;
+}
+.lista-kursy li{
+  break-inside:avoid;padding-left:20px;position:relative;
+  margin-bottom:11px;font-size:.97rem;color:var(--tekst-jasny);line-height:1.5;
+}
+.lista-kursy li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:7px;height:7px;border-radius:50%;background:var(--cieply);
+}
+.podgrupa{
+  font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--akcent-ciemny);font-weight:700;margin-top:28px;
+}
+@media (max-width:700px){ .lista-kursy{ columns:1; } }
+@media print{ .lista-kursy{ columns:2; } }
+
+/* ---------- pasek wersji roboczej (tylko wersja publikowana) ---------- */
+.pasek-budowa{
+  background:var(--pomarancz);color:#fff;text-align:center;
+  padding:9px 16px;font-size:.88rem;font-weight:600;letter-spacing:.02em;
+}
+.pasek-budowa span{font-weight:400;opacity:.92;}
