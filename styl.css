@@ -304,6 +304,11 @@ footer ul{list-style:none;display:grid;gap:8px;}
 .lista-prosta.numerowana li{padding-left:4px;}
 .lista-prosta.numerowana li::before{content:none;}
 
+/* Karta ze zdjeciem i samym tytulem (sekcja "Gabinet") - bez opisu
+   domyslne odstepy zostawialyby pod tytulem pusty pas. */
+.karta.z-foto .tresc h3:only-child{margin-bottom:0;}
+.karta.z-foto .tresc:has(> h3:only-child){padding:20px 26px;}
+
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
 .uwaga-formularz{
   background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
