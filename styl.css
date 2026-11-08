@@ -3,21 +3,22 @@
    Wspolny arkusz stylow dla wszystkich podstron.
    ============================================================ */
 
-/* Paleta wzieta wprost z logo gabinetu: turkusowa ksiazka,
-   magentowy dymek i pomaranczowy gradient u dolu. */
+/* Paleta wzieta wprost z logo gabinetu: turkusowa ksiazka, magentowy
+   dymek i pomaranczowy gradient u dolu. Warstwa tla jest ciepla
+   (kremowa), kolory z logo sluza wylacznie za akcenty. */
 :root{
-  --tlo:#F8FAFA;
+  --tlo:#FBF7F0;          /* cieple kremowe tlo calej strony */
   --tlo-karta:#FFFFFF;
-  --tlo-akcent:#E9F3F5;   /* jasny turkus - sekcje wyrozniane */
+  --tlo-akcent:#F3ECDF;   /* glebszy piasek - sekcje wyrozniane */
   --tekst:#1F2A2C;
   --tekst-jasny:#5A6769;
   --akcent:#2B7E8C;       /* turkus z logo - kolor glowny */
   --akcent-ciemny:#1E616E;
   --cieply:#C0287E;       /* magenta z logo - akcenty, podkreslenia */
   --pomarancz:#EE7B22;    /* pomarancz z logo - drobne detale */
-  --ramka:#DBE5E7;
-  --cien:0 2px 12px rgba(31,42,44,.07);
-  --cien-mocny:0 8px 28px rgba(31,42,44,.13);
+  --ramka:#E6DCCB;        /* ramka w tonacji tla, nie siwa */
+  --cien:0 2px 12px rgba(74,58,38,.08);
+  --cien-mocny:0 8px 28px rgba(74,58,38,.14);
   --zaokr:14px;
 }
 
@@ -193,7 +194,7 @@ section.akcent{background:var(--tlo-akcent);}
   background:var(--tlo);transition:border-color .15s,box-shadow .15s;
 }
 .pole input:focus,.pole textarea:focus,.pole select:focus{
-  outline:none;border-color:var(--akcent);box-shadow:0 0 0 3px rgba(63,125,110,.16);
+  outline:none;border-color:var(--akcent);box-shadow:0 0 0 3px rgba(43,126,140,.18);
 }
 .pole textarea{min-height:130px;resize:vertical;}
 .zgoda{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--tekst-jasny);}
@@ -233,17 +234,17 @@ section.akcent{background:var(--tlo-akcent);}
 
 /* ---------- stopka ---------- */
 footer{
-  background:#2B302D;color:#C8CDC9;padding:48px 0 32px;font-size:.95rem;
+  background:#2E2A24;color:#CFC8BC;padding:48px 0 32px;font-size:.95rem;
 }
 footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
 footer h4{font-family:'Fraunces',Georgia,serif;color:#fff;font-size:1.05rem;
   margin-bottom:12px;font-weight:600;}
-footer a{color:#C8CDC9;text-decoration:none;}
+footer a{color:#CFC8BC;text-decoration:none;}
 footer a:hover{color:#fff;text-decoration:underline;}
 footer ul{list-style:none;display:grid;gap:8px;}
 .stopka-dol{
   border-top:1px solid rgba(255,255,255,.14);margin-top:36px;padding-top:20px;
-  font-size:.85rem;color:#8E948F;text-align:center;
+  font-size:.85rem;color:#978F82;text-align:center;
 }
 
 /* ---------- telefony i tablety ---------- */
