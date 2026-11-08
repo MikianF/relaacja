@@ -290,9 +290,23 @@ footer ul{list-style:none;display:grid;gap:8px;}
 @media (max-width:700px){ .lista-kursy{ columns:1; } }
 @media print{ .lista-kursy{ columns:2; } }
 
-/* ---------- pasek wersji roboczej (tylko wersja publikowana) ---------- */
-.pasek-budowa{
-  background:var(--pomarancz);color:#fff;text-align:center;
-  padding:9px 16px;font-size:.88rem;font-weight:600;letter-spacing:.02em;
+/* ---------- prosta lista wypunktowana (polityka prywatnosci) ---------- */
+.lista-prosta{list-style:none;margin:14px 0 0;}
+.lista-prosta li{
+  padding-left:20px;position:relative;margin-bottom:9px;
+  color:var(--tekst-jasny);line-height:1.55;
 }
-.pasek-budowa span{font-weight:400;opacity:.92;}
+.lista-prosta li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:7px;height:7px;border-radius:50%;background:var(--cieply);
+}
+.lista-prosta.numerowana{list-style:decimal;margin-left:22px;}
+.lista-prosta.numerowana li{padding-left:4px;}
+.lista-prosta.numerowana li::before{content:none;}
+
+/* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
+.uwaga-formularz{
+  background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
+  padding:16px 20px;margin-bottom:18px;font-size:.97rem;line-height:1.55;
+}
+.uwaga-formularz strong{display:block;margin-bottom:4px;color:#A9540E;}
