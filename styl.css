@@ -320,8 +320,10 @@ footer ul{list-style:none;display:grid;gap:8px;}
 .hero-foto.pion{aspect-ratio:4/5;}
 @media (max-width:860px){ .hero-foto.pion{max-width:320px;} }
 
-/* Dalsze akapity wstepu na stronie glownej - pod pierwszym, wiekszym (.lead) */
-.hero p.wstep{margin-top:14px;font-size:1.05rem;color:var(--tekst-jasny);}
+/* Wstep na stronie glownej: cztery akapity jednego tekstu, wiec wszystkie
+   w tym samym rozmiarze. Wiekszy pierwszy akapit wygladal jak blad. */
+.hero p.wstep{margin-top:14px;font-size:1.12rem;color:var(--tekst-jasny);}
+.hero h1 + p.wstep{margin-top:18px;}
 .hero p.wstep strong{color:var(--akcent-ciemny);}
 
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
