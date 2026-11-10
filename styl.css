@@ -326,6 +326,31 @@ footer ul{list-style:none;display:grid;gap:8px;}
 .hero h1 + p.wstep{margin-top:18px;}
 .hero p.wstep strong{color:var(--akcent-ciemny);}
 
+/* ============================================================
+   WARIANT POMARANCZOWY - PROBA (listopad 2026)
+   Anna chce zobaczyc strone oparta na pomaranczu z logo zamiast kremu.
+   Caly wariant to ten jeden blok nadpisujacy palete: zeby wrocic do
+   kremowego, wystarczy go usunac - nic innego nie trzeba ruszac.
+
+   Pomarancz z logo (#EE7B22) jest za jasny pod bialy tekst (kontrast 2,8),
+   wiec przyciski maja jego ciemniejszy, przypalony odcien (4,9), a sam
+   kolor z logo zostaje w tlach, gdzie nie musi niesc napisow.
+   ============================================================ */
+:root{
+  --tlo:#FFF5EA;            /* jasna morela - tlo strony */
+  --tlo-akcent:#FCE3CA;     /* brzoskwinia - sekcje wyrozniane */
+  --ramka:#F2CFAD;
+  --akcent:#B8520B;         /* przypalony pomarancz - przyciski, znaczniki */
+  --akcent-ciemny:#944008;  /* linki, cytat, nazwa w naglowku */
+  --tekst-jasny:#55605F;    /* odrobine ciemniejszy, bo tlo pasow jest mocniejsze */
+  --cieply:#B02474;         /* magenta z logo, przyciemniona pod brzoskwinie */
+  --cien:0 2px 12px rgba(120,60,10,.09);
+  --cien-mocny:0 8px 28px rgba(120,60,10,.16);
+}
+.cta.z-tlem::before{background:rgba(148,64,8,.9);}
+.pole input:focus,.pole textarea:focus,.pole select:focus{box-shadow:0 0 0 3px rgba(184,82,11,.2);}
+/* koniec wariantu pomaranczowego */
+
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
 .uwaga-formularz{
   background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
