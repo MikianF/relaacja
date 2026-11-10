@@ -320,6 +320,10 @@ footer ul{list-style:none;display:grid;gap:8px;}
 .hero-foto.pion{aspect-ratio:4/5;}
 @media (max-width:860px){ .hero-foto.pion{max-width:320px;} }
 
+/* Dalsze akapity wstepu na stronie glownej - pod pierwszym, wiekszym (.lead) */
+.hero p.wstep{margin-top:14px;font-size:1.05rem;color:var(--tekst-jasny);}
+.hero p.wstep strong{color:var(--akcent-ciemny);}
+
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
 .uwaga-formularz{
   background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
