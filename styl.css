@@ -315,6 +315,11 @@ footer ul{list-style:none;display:grid;gap:8px;}
    tekst - dlatego ta odmiana pokazuje obraz zawsze w calosci. */
 .banner.caly{height:auto;}
 
+/* Pionowa odmiana ramki na zdjecie (portret na stronie O mnie). W kwadracie
+   pionowy portret tracil czubek glowy. */
+.hero-foto.pion{aspect-ratio:4/5;}
+@media (max-width:860px){ .hero-foto.pion{max-width:320px;} }
+
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
 .uwaga-formularz{
   background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
