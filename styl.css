@@ -310,6 +310,11 @@ footer ul{list-style:none;display:grid;gap:8px;}
 .karta.z-foto .tresc h3:only-child{margin-bottom:0;}
 .karta.z-foto .tresc:has(> h3:only-child){padding:20px 26px;}
 
+/* Pas z grafika zawierajaca napisy (baner z logo na Ofercie). Zwykly .banner
+   przycina obraz do ramki, co przy zdjeciu jest w porzadku, ale tu ucieloby
+   tekst - dlatego ta odmiana pokazuje obraz zawsze w calosci. */
+.banner.caly{height:auto;}
+
 /* ---------- informacja o wylaczonym formularzu (tylko wersja publikowana) ---------- */
 .uwaga-formularz{
   background:#FFF4E8;border:1px solid #F0C9A0;border-radius:var(--zaokr);
