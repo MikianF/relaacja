@@ -97,19 +97,14 @@
       <!-- ---------- formularz ---------- -->
       <div>
         <h2>Formularz zgłoszeniowy</h2>
-                <div class="uwaga-formularz">
-          <strong>Formularz jeszcze nie dzia&#322;a.</strong>
-          Prosz&#281; o kontakt telefoniczny pod numerem
-          <a href="tel:+48667849081">667&nbsp;849&nbsp;081</a>
-          albo mailowy na <a href="mailto:aniamak@op.pl">aniamak@op.pl</a>.
-        </div>
+        <!-- Zgłoszenia odbiera Formspree (konto na aniamak@op.pl) i wysyła je
+             mailem do Anny. Pole "email" Formspree ustawia jako adres zwrotny. -->
         <form class="formularz" name="kontakt" method="POST"
-              data-netlify="true" netlify-honeypot="bot-field"
-              action="dziekujemy.html">
+              action="https://formspree.io/f/mwloeddy">
 
-          <input type="hidden" name="form-name" value="kontakt">
+          <input type="hidden" name="_subject" value="Nowe zgłoszenie ze strony gabinetu">
           <p class="ukryte">
-            <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
+            <label>Nie wypełniaj tego pola: <input name="_gotcha" tabindex="-1" autocomplete="off"></label>
           </p>
 
           <div class="pole">
@@ -208,14 +203,31 @@
 </footer>
 
 <script>
-// Formularz ruszy razem z polityka prywatnosci - do tego czasu kierujemy
-// rodzicow na telefon i maila, zeby nikt nie wysylal danych w prozne.
-document.querySelectorAll('form').forEach(function(f){
+// Wysyłka w tle: rodzic zostaje na naszej stronie i po sukcesie trafia
+// na dziekujemy.html (darmowy Formspree nie przekierowuje sam).
+// Bez JavaScriptu formularz i tak zadziała - pokaże stronę Formspree.
+(function(){
+  var f = document.querySelector('form.formularz');
+  if (!f || !window.fetch) return;
   f.addEventListener('submit', function(e){
     e.preventDefault();
-    alert('Formularz nie jest jeszcze uruchomiony.\n\nProsz\u0119 o kontakt telefoniczny: 667 849 081\nlub mailowy: aniamak@op.pl');
+    var przycisk = f.querySelector('button[type="submit"]');
+    var napis = przycisk.textContent;
+    przycisk.disabled = true;
+    przycisk.textContent = 'Wysyłam…';
+    fetch(f.action, { method:'POST', body:new FormData(f), headers:{ 'Accept':'application/json' } })
+      .then(function(r){
+        if (r.ok) { window.location.href = 'dziekujemy.html'; return; }
+        throw new Error('blad');
+      })
+      .catch(function(){
+        przycisk.disabled = false;
+        przycisk.textContent = napis;
+        alert('Nie udało się wysłać zgłoszenia.\n\nProszę spróbować ponownie albo zadzwonić: 667 849 081\nlub napisać: aniamak@op.pl');
+      });
   });
-});
+})();
 </script>
+
 </body>
 </html>

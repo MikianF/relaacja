@@ -203,15 +203,5 @@
   </div>
 </footer>
 
-<script>
-// Formularz ruszy razem z polityka prywatnosci - do tego czasu kierujemy
-// rodzicow na telefon i maila, zeby nikt nie wysylal danych w prozne.
-document.querySelectorAll('form').forEach(function(f){
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Formularz nie jest jeszcze uruchomiony.\n\nProsz\u0119 o kontakt telefoniczny: 667 849 081\nlub mailowy: aniamak@op.pl');
-  });
-});
-</script>
 </body>
 </html>
